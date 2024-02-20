@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+ -->
+</head>
+
+<body>
+    <main>
+        <section id="busticikt" class="">
+            <nav class="container mx-auto">
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a>Home</a></li>
+
+                                <li><a>About</a></li>
+                                <li><a>Destination</a></li>
+
+                                <li><a>Search</a></li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-ghost text-xl font-extrabold text-[#030712]">TAJ-Ticket</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a>Home</a></li>
+
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end ">
+                        <!-- <a class="btn">Button</a> -->
+                        <button class="btn border-[#1DD100] bg-slate-100 text-[#1DD100] mr-12 "> <span
+                                class="text-[#1DD100] font-bold ">BUS</span><img src="./images/bus-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <!-- banner section -->
+            <div class="container mx-auto  bg-no-repeat bg-center ..."
+                style="background-image: url(./images/banner.png);">
+                <div class="justify-center min-h-screen leading-7 ">
+                    <div class="mt-10 p-10 leading-7 text-center">
+                        <h3 class="text-8xl font-bold text-center p-10 text-[#FFFFFF]">End-to-End Travel with <br><span
+                                class="text-[#1DD100]"> TAJ-Paribahan</span></h3>
+                        <p class="text-xl text-center font-normal text-[#FFFFFF]">Yes, you can run unit tests and view
+                            the
+                            results directly within the app.
+                            The
+                            <br> integrated testing features allow for a streamlined .
+                        </p>
+                        <button onclick=" buy()" class="btn mt-10 font-semibold bg-[#1DD100] text-[#030712]">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copon card section -->
+            <section class="container mx-auto ">
+
+                <!-- copon 1 tikit -->
+                <div class="text-center mt-8 ">
+                    <h2 class="text-center font-bold m-6 ">Best offers for you</h2>
+                    <div class="flex text-justify gap-16 ">
+                        <div class="bg-[#FFBF0F] flex felx-col rounded-xl justify-center items-center flex-1 ">
+                            <div class="justify-center  text-justify p-6">
+                                <h4 class="font-bold text-[#030712CC]">15% OFF</h4>
+                                <p class="font-normal text-[#030712CC]">on your next purchase</p>
+                                <p class="font-normal text-[#03071280]">use by January 2024</p>
+                            </div>
+                            <img src="./images/cupon-devider.png" alt="">
+                            <div class="p-6">
+                                <h4 class="font-bold text-[#030712CC]">NEW15</h4>
+                                <p class="font-normal text-[#03071280]">Coupon Code</p>
+                            </div>
+                        </div>
+                        <!-- copon 2 tikit -->
+                        <div class="bg-[#F78C9C] flex felx-col rounded-xl justify-center items-center flex-1  ">
+                            <div class=" p-6">
+                                <h4 class="font-bold text-[#030712CC]">20% OFF</h4>
+                                <p class="font-normal text-[#030712CC]">on your next purchase</p>
+                                <p class="font-normal text-[#03071280]">use by January 2024</p>
+                            </div>
+                            <img src="./images/cupon-devider.png" alt="">
+                            <div class="p-6">
+                                <h4 class="font-bold text-[#030712CC]">Couple 20</h4>
+                                <p class="font-normal text-[#03071280]">Coupon Code</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn border-[#1DD100] bg-slate-100 text-[#1DD100] font-normal mt-10  ">See All
+                        Offers</button>
+                </div>
+            </section>
+        </section>
+        <!-- last section js part and sit select part -->
+        <section id="busticiktsit" class="bg-[#F7F8F8] mt-8  container mx-auto rounded-3xl border-lime-500  border-t-2">
+            <div class="mt-4 pb-5">
+                <h3 class="text-8xl font-bold text-center mt-16  pt-20 text-[#030712]">P.H Paribahan <br></h3>
+                <p class="  mt-6 mb-6  text-xl text-center font-normal text-[#03071299]">Yes, you can run unit tests and
+                    view the results directly within the app. The <br> integrated testing features allow for a
+                    streamlined .
+                </p>
+            </div>
+            <div class="rounded-lg shadow-3xl flex bg-[#FFFFFF] mt-4">
+                <!-- ekhane avalabale site and 3 button start  -->
+                <div class="shadow-3xl p-8">
+                    <div class="flex spacebetun">
+                        <div class="flex">
+                            <img src="./images/bus-logo.png" alt="">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#030712]">Greenline Paribahan</h3>
+                                <p class="">Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <!--avialabele site   -->
+                        <div class=" flex bg-[#1DD10026] rounded-md">
+                            <img src="./images/seat-green.png" alt="">
+                            <div>
+                                <p class="text-[#1DD100] "><span class="sub-site">40 </span>Seats left</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- buler site 3 button -->
+                    <div class="bg-[#F7F8F8] rounded-xl mt-4 p-6 ">
+                        <div class="flex spacebetun">
+                            <p>Route</p>
+                            <p>Dhaka - Sylhet</p>
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="flex spacebetun">
+                            <p>Departure Time</p>
+                            <p>9:00 PM</p>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="flex gap-8">
+                            <div><button class="btn bg-[#0307120D] text-[#030712CC]">Boarding Point - Laxmipur</button>
+                            </div>
+                            <div><button class="btn bg-[#0307120D] text-[#030712CC]">Dropping Point - Bogura</button>
+                            </div>
+                            <div><button class="btn bg-[#0307120D] text-[#030712CC]">Boarding Point - Laxmipur</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ekhane avalabale site and 3 button end -->
+                <!-- info divider -->
+                <div>
+                    <img src="./images/info-devider.png" alt="">
+                </div>
+                <!-- per sit -->
+                <div class="container mx-auto card w-96 bg-base-100  items-center justify-center  ">
+                    <div class="min-h-screen items-center justify-center">
+                        <img src="./images/fare.png" alt="">
+                        <h3 class="text-center text-[#030712] font-bold">550 Taka</h3>
+                        <p class="text-center text-[#030712]">Per Seat</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- tikit bus -->
+            <!-- main site div -->
+            <div class="bg-[#FFFFFF] rounded-xl mt-16 flex ">
+                <div class="flex-1 p-6 border-r-2 border-dashed">
+                    <h2 class="text-[#030712] font-bold border-b-2 pb-3 mb-4">Select Your Seat</h2>
+                    <div class="flex spacebetun border-b-2 pb-4 mb-4">
+
+                        <div class=" flex  rounded-md ">
+                            <img src="./images/seat-gray.png" alt="">
+                            <div>
+                                <p class="text-[#03071280] ">Available</p>
+                            </div>
+                        </div>
+
+                        <div class=" flex  rounded-md">
+                            <img src="./images/seat-green-filled.png" alt="">
+                            <div>
+                                <p class="text-[#1DD100] ">Selected</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- start count site  -->
+                    <div class=" gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">A</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">A1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">A2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">A3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">A4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">B</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">B1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">B2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">B3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">B4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">C</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">C1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">C2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">C3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">C4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">D</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">D1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">D2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">D3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">D4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">E</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">E1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">E2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">E3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">E4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">F</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">F1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">F2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">F3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">F4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">G</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">G1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">G2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">G3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">G4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">H</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">H1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">H2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">H3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">H4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">I</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">I1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">I2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">I3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">I4</button>
+                        </div>
+
+                    </div>
+                    <!-- site -->
+                    <div class="gap-14 flex bg-[#FFFFFF]">
+
+                        <div class="gap-8 flex mt-6">
+                            <h3 id="sit-seriul" class="text-[#03071280] font-semibold pt-2 pb-2 ">J</h3>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">J1</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">J2</button>
+                        </div>
+                        <div class="gap-8 flex mt-6">
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">J3</button>
+                            <button id="sit"
+                                class="btn text-[#03071280] font-semibold pl-10 pr-10 pt-2 pb-2 bg-[#F7F8F8]">J4</button>
+                        </div>
+
+                    </div>
+
+                    <!-- site sount end -->
+                </div>
+                <!--passebger ditails  -->
+                <div class="flex-1 p-6">
+                    <h2 class="text-[#030712] font-bold border-b-2 border-dashed pb-3 mb-4">Select Your Seat</h2>
+
+                    <div class="bg-[#F7F8F8] rounded-xl mt-4 p-6">
+                        <div class="flex spacebetun border-b-2 pb-4 border-dashed">
+                            <p class="text-[#030712] font-semibold">Seat <sup id="total-site"
+                                    class="text-white bg-[#030303] font-bold rounded-xl">0</sup></p>
+                            <p class="text-[#030712] font-semibold">Class</p>
+                            <p class="text-[#030712] font-semibold">Price</p>
+                        </div>
+                        <div class="flex spacebetun p-4">
+                            <p id="culect-sit-c" class="text-[#03071299] font-semibold"></p>
+                            <p id="culect-sit-e" class="text-[#03071299] font-semibold"></p>
+                            <p id="culect-sit-5" class="text-[#03071299] font-semibold"></p>
+                        </div>
+                        <div class="flex spacebetun p-4">
+                            <p id="culect-sit-c" class="text-[#03071299] font-semibold"></p>
+                            <p id="culect-sit-e" class="text-[#03071299] font-semibold"></p>
+                            <p id="culect-sit-5" class="text-[#03071299] font-semibold"></p>
+                        </div>
+
+                        <div class="flex spacebetun">
+                            <p class="text-[#030712] font-semibold">Total Price</p>
+
+                            <p class="text-[#030712] font-semibold">BDT 1100</p>
+                        </div>
+                        <div>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="text" class="grow " placeholder="Search" />
+                                <!-- <button class="btn bg-[#1DD100] h-2/4">Apply..</button> -->
+                                <button class="btn bg-[#1DD100] btn-sm text-white">Apply..</button>
+                            </label>
+                        </div>
+                        <div class="flex spacebetun">
+                            <p class="text-[#030712] font-semibold">Grand Total</p>
+
+                            <p class="text-[#030712] font-semibold">BDT 1100</p>
+                        </div>
+
+
+                    </div>
+                    <div class="card shrink-0 w-full p-5  ">
+                    </div>
+                    <!-- passevger details and phn  -->
+                    <div class="grid grid-cols-1  gap-6 mt-6">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">Passenger Name*</span>
+                            </label>
+                            <input type="text" placeholder="Enter Your Name" class="input input-bordered" required />
+                        </div>
+
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">Phone Number</span>
+                            </label>
+                            <input type="text" placeholder="Enter Your Phone Number" class="input input-bordered"
+                                required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">Email ID</span>
+                            </label>
+                            <input type="email" placeholder="Enter Your Email" class="input input-bordered" required />
+                        </div>
+                    </div>
+
+                    <div class="form-control mt-20">
+                        <button  onclick="buytikit()" class="btn btn-error text-white font-semibold bg-[#1DD100]">Next
+                        </button>
+                    </div>
+                    <div class="flex spacebetun gap-6">
+                        <p class="underline text-[#03071299]">Terms and Conditions</p>
+                        <p class="underline text-[#03071299]">Cancellation Policy</p>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            <footer class="footer p-10 bg-neutral text-neutral-content">
+                <div class="space-x-96 items-center justify-items-center w-11/12 ">
+                    <div
+                        class="space-x-96 items-center justify-items-center w-11/12 ml-10 spacebetun flex border-b-2 pb-4  border-dashed">
+                        <div>
+                            <h2 class="text-[#FFFFFF] font-bold">P-Ticket</h2>
+                            <p>ACME Industries Ltd.<br>Providing reliable tech since 1992</p>
+                        </div>
+
+                        <nav>
+
+                            <div class="grid grid-flow-col gap-4">
+
+                                <div>
+                                    <h6 class="footer-title">Download our app</h6>
+                                    <button class="border p-2 rounded-xl">
+                                        <div class="flex">
+                                            <img src="./images/playstore.png" alt="">
+                                            <div>
+                                                <h3 class="text-[#FFFFFF] font-semibold">GET IN ON</h3>
+                                                <h2 class="text-[#FFFFFF] font-bold">Google Play</h2>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="flxe space-x-96 items-center justify-items-center w-11/12">
+
+                        <p class="pt-8">@all rights reserved, TAJ-Ticket services limited.2024</p>
+
+
+
+                        <p class="-pt-2 mt-0">Terms & condition &nbsp;&nbsp;&nbsp;Return & refund policy
+                            &nbsp;&nbsp;&nbsp;Privacy policy</p>
+
+
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <section  class="container mx-auto mt-8 ">
+        <div class="container mx-auto card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+                <img src="./images/success.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+
+                <p class="text-[#4A4A4A] font-semibold"><i>Thank you for Booking Our Bus Seats.
+                        We are working hard to find the best service </i>and eals for you.</p>
+                <div class="card-actions">
+                    <button onclick="cntiniubuytikit()" class="btn btn-wide bg-[#27AE60] text-white font-semibold">Continue</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+
+</html>
